@@ -1,0 +1,32 @@
+<% content_for :title do %>
+  Detalhes de Provider
+<% end %>
+
+<div class="page-header">
+  <h1>Detalhes de Provider</h1>
+  <div>
+    <%= link_to edit_provider_path(@provider), class: 'btn btn-success' do %>
+      <%= icon 'fas', 'edit' %>
+      Editar
+    <% end %>
+    <%= link_to providers_path, class: 'btn btn-outline-secondary' do %>
+      <%= icon 'fas', 'bars' %>
+      Voltar
+    <% end %>
+  </div>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @provider.name %></dd>
+
+  <dt>Cnpj:</dt>
+  <dd><%= @provider.cnpj %></dd>
+
+  <dt>Address:</dt>
+  <dd><%= @provider.address %></dd>
+
+  <dt>Phone:</dt>
+  <dd><%= @provider.phone %></dd>
+
+</dl>
