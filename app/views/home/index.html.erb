@@ -1,2 +1,23 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<!--<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>-->
+<h1>
+<p class="text-primary">Resumo das Movimentações</p> </h1>
+<h2>Saldo da conta: <%= format_BRL @total %></h2>
+
+<!--<h2>Despesas</h2>
+<h2> Pagas: <%= format_BRL @total_paid %></h2> <h2>à Pagar :<%=  format_BRL@total_not_paid %></h2>
+
+<h2>saldo  <%= format_BRL @res %></h2>-->
+
+<table style="width:100%">
+  <tr>
+ 
+    <th><h2>Despesas Pagas</h2></th> 
+    <th><h2>despesas à pagar</h2></th>
+  </tr>
+
+  <tr>
+   <td class="table-success"><h2><%= format_BRL @total_paid %></h2></td></td>
+    <td class="table-warning"><h2><%=  format_BRL@total_not_paid  %></h2></td>
+    
+  </tr>

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  expense: MyString
+  value: 1.5
+  due_date: 2019-11-28
+  pay_day: 2019-11-28
+  status: MyString
+
+two:
+  expense: MyString
+  value: 1.5
+  due_date: 2019-11-28
+  pay_day: 2019-11-28
+  status: MyString

@@ -1,0 +1,47 @@
+<% content_for :title do %>
+  Garantors
+<% end %>
+
+<div class="page-header">
+  <h1>Garantidora</h1>
+  <%= link_to new_garantor_path, class: 'btn btn-primary' do %>
+    <%= icon 'fas', 'plus' %>
+    Nova Garantidora
+  <% end %>
+</div>
+<h3>Saldo:<%= format_BRL @tranf %></h3>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Endereço</th>
+        <th>Telefone</th>
+        <th>Valor da transferencia</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @garantors.each do |garantor| %>
+        <tr>
+          <td><%= garantor.name %></td>
+          <td><%= garantor.address %></td>
+          <td><%= garantor.telephone %></td>
+          <td><%=format_BRL garantor.value_tranfer %></td>
+          <td>
+            <%= link_to garantor, class: 'btn btn-info btn-sm' do %>
+              <%= icon 'fas', 'eye', class: 'fa-fw' %>
+            <% end %>
+            <%= link_to edit_garantor_path(garantor), class: 'btn btn-success btn-sm' do %>
+              <%= icon 'fas', 'edit', class: 'fa-fw' %>
+            <% end %>
+            <%= link_to garantor, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'btn btn-danger btn-sm' do %>
+              <%= icon 'fas', 'times', class: 'fa-fw' %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

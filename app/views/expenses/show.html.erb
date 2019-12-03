@@ -1,0 +1,35 @@
+<% content_for :title do %>
+  Detalhes de Expense
+<% end %>
+
+<div class="page-header">
+  <h1>Detalhes de Expense</h1>
+  <div>
+    <%= link_to edit_expense_path(@expense), class: 'btn btn-success' do %>
+      <%= icon 'fas', 'edit' %>
+      Editar
+    <% end %>
+    <%= link_to expenses_path, class: 'btn btn-outline-secondary' do %>
+      <%= icon 'fas', 'bars' %>
+      Voltar
+    <% end %>
+  </div>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Expense:</dt>
+  <dd><%= @expense.expense %></dd>
+
+  <dt>Value:</dt>
+  <dd><%= @expense.value %></dd>
+
+  <dt>Due date:</dt>
+  <dd><%= @expense.due_date %></dd>
+
+  <dt>Pay day:</dt>
+  <dd><%= @expense.pay_day %></dd>
+
+  <dt>Status:</dt>
+  <dd><%= @expense.status %></dd>
+
+</dl>

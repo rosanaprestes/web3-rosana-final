@@ -1,0 +1,45 @@
+<% content_for :title do %>
+  Managers
+<% end %>
+
+<div class="page-header">
+  <h1>Managers</h1>
+  <%= link_to new_manager_path, class: 'btn btn-primary' do %>
+    <%= icon 'fas', 'plus' %>
+    Novo Sindico
+  <% end %>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Cpf</th>
+        <th>Telefone</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @managers.each do |manager| %>
+        <tr>
+          <td><%= manager.name %></td>
+          <td><%= manager.cpf %></td>
+          <td><%= manager.telephone %></td>
+          <td>
+            <%= link_to manager, class: 'btn btn-info btn-sm' do %>
+              <%= icon 'fas', 'eye', class: 'fa-fw' %>
+            <% end %>
+            <%= link_to edit_manager_path(manager), class: 'btn btn-success btn-sm' do %>
+              <%= icon 'fas', 'edit', class: 'fa-fw' %>
+            <% end %>
+            <%= link_to manager, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'btn btn-danger btn-sm' do %>
+              <%= icon 'fas', 'times', class: 'fa-fw' %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

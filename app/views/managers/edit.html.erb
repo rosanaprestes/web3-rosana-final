@@ -1,0 +1,19 @@
+<% content_for :title do %>
+  Editando Manager
+<% end %>
+
+<div class="page-header">
+  <h1>Editando Manager</h1>
+  <div>
+    <%= link_to @manager, class: 'btn btn-info' do %>
+      <%= icon 'fas', 'eye' %>
+      Ver
+    <% end %>
+    <%= link_to managers_path, class: 'btn btn-outline-secondary' do %>
+      <%= icon 'fas', 'bars' %>
+      Voltar
+    <% end %>
+  </div>
+</div>
+
+<%= render 'form' %>

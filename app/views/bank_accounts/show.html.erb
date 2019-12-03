@@ -1,0 +1,35 @@
+<% content_for :title do %>
+  Detalhes de Bank account
+<% end %>
+
+<div class="page-header">
+  <h1>Detalhes de Bank account</h1>
+  <div>
+    <%= link_to edit_bank_account_path(@bank_account), class: 'btn btn-success' do %>
+      <%= icon 'fas', 'edit' %>
+      Editar
+    <% end %>
+    <%= link_to bank_accounts_path, class: 'btn btn-outline-secondary' do %>
+      <%= icon 'fas', 'bars' %>
+      Voltar
+    <% end %>
+  </div>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @bank_account.name %></dd>
+
+  <dt>Account number:</dt>
+  <dd><%= @bank_account.account_number %></dd>
+
+  <dt>Client:</dt>
+  <dd><%= @bank_account.client %></dd>
+
+  <dt>Date:</dt>
+  <dd><%= @bank_account.date %></dd>
+
+  <dt>Balance:</dt>
+  <dd><%= @bank_account.balance %></dd>
+
+</dl>
