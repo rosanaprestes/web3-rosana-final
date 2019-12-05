@@ -2,7 +2,7 @@
 <p>Find me in app/views/home/index.html.erb</p>-->
 <h1>
 <p class="text-primary">Resumo das Movimentações</p> </h1>
-<h2>Saldo da conta: <%= format_BRL @total %></h2>
+<h2>Saldo da conta:<%= format_BRL @total %>
 
 <!--<h2>Despesas</h2>
 <h2> Pagas: <%= format_BRL @total_paid %></h2> <h2>à Pagar :<%=  format_BRL@total_not_paid %></h2>
@@ -17,7 +17,7 @@
   </tr>
 
   <tr>
-   <td class="table-success"><h2><%= format_BRL @total_paid %></h2></td></td>
-    <td class="table-warning"><h2><%=  format_BRL@total_not_paid  %></h2></td>
+   <td class="text-primary"><h2><%= format_BRL @total_paid %></h2></td></td>
+   <td class="text-success"><h2><%=  format_BRL@total_not_paid  %></h2></td>
     
   </tr>
